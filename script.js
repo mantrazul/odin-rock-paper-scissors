@@ -10,14 +10,12 @@ function getComputerChoice() {
     }   
  }
 
- const playerSelection = prompt('Insert').toLowerCase()
-
- const computerSelection = getComputerChoice();
-
- console.log(playerSelection, computerSelection);
+ let playerSelection = 'rock';
+ let computerSelection = 'paper';
 
  function playRound(playerSelection, computerSelection) {
-
+    playerSelection = prompt('Insert').toLowerCase();
+    computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
         return "It's a draw.";
     }
@@ -45,16 +43,14 @@ function getComputerChoice() {
             return "You win";
         }
     }
+    playerSelection = prompt('Insert').toLowerCase();
+    computerSelection = getComputerChoice();
  }
-
- function game() {
-    for (let rounds = 0; rounds < 5; rounds++) {
-        for (let userScore = 0; userScore < 5; userScore++) {
-            if (playRound(playerSelection,computerSelection) === "You win") {
-            return userScore++
-        }
-     }
-    }
+function game() {
+    return console.log(playRound(playerSelection,computerSelection)) 
 }
 
-console.log(playRound(playerSelection,computerSelection), playerSelection, computerSelection)
+for ( i = 0; i < 5; i++) {
+    game();
+    console.log(playerSelection,computerSelection);   
+}
