@@ -9,13 +9,8 @@ function getComputerChoice() {
         return 'scissors';
     }   
  }
-
- let playerSelection = 'rock';
- let computerSelection = 'paper';
-
+ 
  function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt('Insert').toLowerCase();
-    computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
         return "It's a draw.";
     }
@@ -43,10 +38,10 @@ function getComputerChoice() {
             return "You win";
         }
     }
-    playerSelection = prompt('Insert').toLowerCase();
-    computerSelection = getComputerChoice();
  }
 function game() {
+    playerSelection = prompt('Insert').toLowerCase();
+    computerSelection = getComputerChoice();
     return console.log(playRound(playerSelection,computerSelection)) 
 }
 
