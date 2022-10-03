@@ -1,5 +1,6 @@
-let userScore = 0
-let computerScore = 0
+let userScore = 0;
+let computerScore = 0;
+const maxRounds = 5;
 
 function getComputerChoice() {
     const randomMove = Math.floor(Math.random()*3);
@@ -12,7 +13,17 @@ function getComputerChoice() {
         return 'scissors';
     }   
  }
+
+ function computerWin() {
+    computerScore++
+    return console.log("You lose");
+ }
  
+function playerWin() {
+    userScore++;
+    return console.log("You win");
+}
+
  function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return "It's a draw.";
@@ -20,40 +31,28 @@ function getComputerChoice() {
 
     if (playerSelection === "rock") {
         if (computerSelection === "paper") {
-            return "You lose.";
-            computerScore++;
+            computerWin();
         } else {
-            return "You win";
-            userScore++;
+            playerWin();
         }
     }
 
     if (playerSelection === "paper") {
         if (computerSelection === "rock") {
-            return "You win";
-            userScore++;
+            playerWin();
         } else {
-            return "You lose";
-            computerScore++;
+            computerWin();
         }
     }
 
     if (playerSelection === "scissors") {
         if (computerSelection === "rock") {
-            return "You lose";
-            computerScore++;
+            computerWin();
         } else {
-            return "You win";
-            userScore++;
+            playerWin();
         }
     }
  }
- 
-function game() {
-    playerSelection = prompt('Insert').toLowerCase();
-    computerSelection = getComputerChoice();
-    return console.log(playRound(playerSelection,computerSelection)) 
-}
 
 function checkWinner() {
     if (computerScore > userScore) {
@@ -63,9 +62,14 @@ function checkWinner() {
     }
 }
 
-for ( i = 0; i < 5; i++) {
-    game();
-    console.log(playerSelection,computerSelection);
+function game() {
+    for (let i = 0; i < maxRounds; i++ ) {
+        playerSelection = prompt('Insert').toLowerCase();
+        computerSelection = getComputerChoice();
+        playRound(playerSelection,computerSelection);
+        console.log(playerSelection,computerSelection) 
+    }
+    checkWinner();
 }
 
-checkWinner()
+game();
