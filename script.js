@@ -68,8 +68,8 @@ function game() {
         computerSelection = getComputerChoice();
         playRound(playerSelection,computerSelection);
         console.log(playerSelection,computerSelection) 
-    }
+    }   
     checkWinner();
 }
 
-game();
+//game();
