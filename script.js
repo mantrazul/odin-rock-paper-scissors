@@ -56,12 +56,17 @@ function playerWin() {
         } else {
             playerWin();
         }
+
+    }
+    if(computerScore === 6 || userScore === 6) {
+        checkWinner()
+        disableButtons()
     }
  }
 
 function checkWinner() {
     if (computerScore > userScore) {
-        return console.log("Computer won!");
+        return narratorText.innerHTML = "Oh no, computer won."
     } else {
         return narratorText.innerHTML = "Congratulations, you won!"
     }
@@ -72,3 +77,9 @@ buttons.forEach(buttons => {
     playRound(buttons.value.toLocaleLowerCase())
     })
 })
+
+function disableButtons() {
+    buttons.forEach(elem => {
+        elem.disabled = true
+    })
+}
