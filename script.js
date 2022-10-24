@@ -1,6 +1,10 @@
-let userScore = 0;
-let computerScore = 0;
+let userScore = 1;
+let computerScore = 1;
 const maxRounds = 5;
+const buttons = document.querySelectorAll('input');
+const narratorText = document.querySelector('.narrator');
+const playerPoints = document.querySelector('.playerPoints');
+const computerPoints = document.querySelector('.computerPoints');
 
 function getComputerChoice() {
     const randomMove = Math.floor(Math.random()*3);
@@ -15,18 +19,19 @@ function getComputerChoice() {
  }
 
  function computerWin() {
-    computerScore++
-    return console.log("You lose");
+    computerPoints.innerHTML = computerScore++
+    return narratorText.innerHTML = "Oh, no. You lost!"
  }
  
 function playerWin() {
-    userScore++;
-    return console.log("You win");
+    playerPoints.innerHTML = userScore++;
+    return narratorText.innerHTML = "Congratulations, you won!"
 }
 
- function playRound(playerSelection, computerSelection) {
+ function playRound(playerSelection) {
+    computerSelection = getComputerChoice()
     if (playerSelection === computerSelection) {
-        return "It's a draw.";
+        return narratorText.innerHTML = "It's a draw."
     }
 
     if (playerSelection === "rock") {
@@ -58,18 +63,12 @@ function checkWinner() {
     if (computerScore > userScore) {
         return console.log("Computer won!");
     } else {
-        return console.log("Congratulations, you won!");
+        return narratorText.innerHTML = "Congratulations, you won!"
     }
 }
 
-function game() {
-    for (let i = 0; i < maxRounds; i++ ) {
-        playerSelection = prompt('Insert').toLowerCase();
-        computerSelection = getComputerChoice();
-        playRound(playerSelection,computerSelection);
-        console.log(playerSelection,computerSelection) 
-    }   
-    checkWinner();
-}
-
-//game();
+buttons.forEach(buttons => {
+    buttons.addEventListener('click', function(){
+    playRound(buttons.value.toLocaleLowerCase())
+    })
+})

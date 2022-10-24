@@ -13,13 +13,13 @@
     <section class="section-one">
     <p>Please choose your input</p>
     <ul class="button-list">
-        <li class ="player-buttons"><button>Rock</button></li>
-        <li class ="player-buttons"><button>Paper</button></li>
-        <li class = "player-buttons"><button>Scissors</button></li>
+        <li class ="playerButtons" id="rock"><input type="button" value="Rock"></input></li>
+        <li class ="playerButtons" id="paper"><input type="button" value="Paper"></input></li>
+        <li class = "playerButtons" id="scissors"><input type="button" value="Scissors"></input></li>
     </ul>
         <p class ="narrator">Who will be the winner?</p>
-        <p class= "points">Player: 0</p>
-        <p class="points">Computer: 0</p>
+        <p>Player: <span class="playerPoints"></span></p>
+        <p>Computer: <span class="computerPoints"></span></p>
     </section>
     <script src="script.js"></script>
 </body>
