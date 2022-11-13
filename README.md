@@ -5,7 +5,7 @@ A project to create a interactive Rock Papers and Scissors look alike as part fr
 
 # Page Preview
 
-You can find the link to the pages [here]
+You can find the link to the pages [here](https://mantrazul.github.io/odin-rock-paper-scissors/)
 
 # Challenges, difficulties and triumphs
 
