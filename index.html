@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normilize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title> Rock Paper Scissors</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -13,20 +13,25 @@
 <body>
     <section class="section-one">
     <h1>Rock Papers Scissors</h1>
-    <p>Please choose your input</p>
+    <p>First to score five points wins!</p>
+    <h2>Round</h2>
+    <p class="rounds">1</p>
     <ul class="button-list">
         <li class ="playerButtons" id="rock"><input type="button" value="Rock"></input></li>
         <li class ="playerButtons" id="paper"><input type="button" value="Paper"></input></li>
         <li class = "playerButtons" id="scissors"><input type="button" value="Scissors"></input></li>
     </ul>
         <p class ="narrator">Who will be the winner?</p>
+        <h3 class="scoreText">Score</h3>
+        <div class="scoreSection">
         <p>Player: <span class="playerPoints"></span></p>
         <p>Computer: <span class="computerPoints"></span></p>
+        </div>
     </section>
 
     <footer class="footer">
             <p>made by mantrazul</p>
-            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/mantrazul/odin-rock-paper-scissors"><i class="fa-brands fa-github"></i></a>
     </footer>
 
     <script src="js/script.js"></script>

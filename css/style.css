@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital@0;1&display=swap');
+
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+input {
+    background-color: transparent;
+    border-style: solid;
+    padding: 10px;
+}
+
+input:hover {
+    background-color: black;
+    color: rgb(110, 110, 110);
+    border-color: rgb(49, 49, 49);
+}
+
+input:active {
+    background-color: rgb(32, 32, 32);
+    color: rgb(243, 243, 243);
+}
+
+input:disabled {
+    border-style: none;
+}
+
+body {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+
+@keyframes bgcolor {
+    0% {
+        background-color: #45a3e5
+    }
+
+    30% {
+        background-color: #66bf39
+    }
+
+    60% {
+        background-color: #eb670f
+    }
+
+    90% {
+        background-color: #f35
+    }
+
+    100% {
+        background-color: #864cbf
+    }
+}
+
+
+h1 {
+    margin: auto;
+    font-family: 'Kanit', sans-serif;
+    font-size: 49px;
+}
+
+.section-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.button-list {
+    list-style: none;
+    display: flex;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerButtons {
+    margin-left: 4%;
+    border-style: solid;
+    padding: 10px;
+    font-family: 'Kanit', sans-serif;
+    
+}
+
+p .narrator .points {
+    display: flex;
+    margin: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(107, 105, 105);
+    color: white;
+    text-align: center;
+    border-top: 1px;
+    border-color: brown;
+    border-style: solid;
+}
+
+.container-one {
+    display: flex;
+}
+
+.footer p {
+    padding-right: 10px;
+    margin-left: 70px;
+}
+
+.footer p {
+    font-family: 'Kanit', sans-serif;
+    color: rgb(255, 245, 245);
+}
+
+.scoreSection {
+    display: flex;
+    font-family: 'Kanit', sans-serif;
+}
+
+.playerPoints {
+    font-family: 'Kanit', sans-serif;
+}
+
+.scoreComputer {
+    margin-left: 2px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.scorePlayer {
+    margin-right: 10px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.narratorText {
+    margin-top: 10px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.scoreText {
+    margin: 10px 10px;
+    border-style: solid;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.section-one p {
+    margin-top: 10px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.section-one h2 {
+    font-family: 'Kanit', sans-serif;
+}
+
+.rounds {
+    border-style: solid;
+    border-radius: 50%;
+    padding: 10px;
+    padding-left: 17px;
+    padding-right: 17px;
+}
